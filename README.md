@@ -1,16 +1,109 @@
-# React + Vite
+# 🐾 Pet Shelter Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Frontend application for a Pet Shelter management system.
 
-Currently, two official plugins are available:
+The application provides a user-friendly interface for viewing, registering, editing, and deleting pets by communicating with the Pet Shelter REST API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Technologies
 
-## React Compiler
+* React
+* Vite
+* JavaScript
+* Axios
+* React Router
+* HTML
+* CSS
+* Yarn
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📌 Features
 
-## Expanding the ESLint configuration
+* Home page
+* View registered pets
+* View pet details
+* Add new pets
+* Edit pet information
+* Delete pets
+* Navigation between pages
+* Integration with REST API
+* Responsive interface
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## ⚙️ Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Enter the project directory:
+
+```bash
+cd front-pets
+```
+
+Install the dependencies:
+
+```bash
+yarn install
+```
+
+Start the development server:
+
+```bash
+yarn dev
+```
+
+Vite will display the local address in the terminal, usually:
+
+```text
+http://localhost:5173
+```
+
+## 🔗 Backend Integration
+
+The frontend communicates with the Pet Shelter API using Axios.
+
+The backend should be running at:
+
+```text
+http://localhost:3000
+```
+
+Example request:
+
+```javascript
+const response = await axios.get(
+  "http://localhost:3000/pets"
+)
+```
+
+## 🧭 Application Routes
+
+| Route               | Page       | Description                      |
+| ------------------- | ---------- | -------------------------------- |
+| `/`                 | Home       | Application home page            |
+| `/pets`             | Pet List   | Displays all registered pets     |
+| `/pets/:petId`      | Pet Detail | Displays information about a pet |
+| `/pets/:petId/edit` | Edit Pet   | Updates pet information          |
+| `/add`              | Add Pet    | Registers a new pet              |
+
+## 🔄 CRUD Integration
+
+The frontend communicates with the API through the following operations:
+
+```text
+Pet List      → GET    /pets
+Pet Detail    → GET    /pets/:id
+Add Pet       → POST   /pets
+Edit Pet      → PUT    /pets/:id
+Delete Pet    → DELETE /pets/:id
+```
+
+## 📚 Purpose
+
+This project was developed to practice React development, component organization, state management, routing, Axios HTTP requests, REST API integration, forms, and frontend/backend communication.
+
+## 💻 Backend
+
+This frontend was developed to work with the Pet Shelter REST API built with Node.js and Express.
